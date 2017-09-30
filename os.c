@@ -295,7 +295,7 @@ int main()
 				bool del;
 				while ((next_file = readdir (dir)) != NULL)
 				{
-					if (strcmp (next_file->d_name, ".") != "." && strcmp (next_file->d_name, "..") != "..")
+					if (strcmp (next_file->d_name, ".") != 0 && strcmp (next_file->d_name, "..") != 0)
 					{
 						del = true;
 						for (i = 0; i < len_list; i++)
