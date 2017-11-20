@@ -1,7 +1,6 @@
 # Peripherals Lab Report
 ## mqtt
-###### install paho-mqtt for python in Raspberry Pi 2
+we have used paho-mqtt for connecting Raspberry Pi to mqtt broker. To install it in Python run the following command.
 ```
 $ pip install paho-mqtt
 ```
-we have used paho-mqtt for connecting Raspberry Pi to mqtt broker.
