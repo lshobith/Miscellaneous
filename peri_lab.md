@@ -13,3 +13,5 @@ create username and password for mqtt broker. we have use `username` and `passwo
 
 since mqtt broker is also in raspberry pi, the python code can communicate with mqtt broker using `127.0.0.1` as hostname, `1883` as port, username and password.
 
+we used wifi adapter to connect Raspberry pi to `hotspot` and connected android phone to the same hotspot. The ip address given by the hotspot to raspberry pi is `192.168.43.108`. MQTT Dashboard can communicate with mqtt broker using `192.168.43.108` as hostname, `1883` as port, username and password.
+
