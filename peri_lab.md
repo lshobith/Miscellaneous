@@ -31,6 +31,17 @@ mqtt_client.on_publish = on_publish()
 mqtt_client.on_message = on_message()
 mqtt_client.on_connect = on_connect()
 ```
+`on_publish()` does nothing
+```python
+def on_publish():
+  pass
+```
+
+`on_connect()` prints a message to console and connect to the topic `swa_news`.
+```python
+def on_connect():
+  pass
+```
 
 we need to provide username, password and then connect using ip and port.
 ```python
@@ -55,4 +66,23 @@ mqtt_client.publish("topic", "message")
 ```
 where `topic` and `message` must be replaced with your own topic and message.
 
-The 
+The weighing machine has 3 modes and there is a function for each one of them.
+```python
+mode_one() # for mode one.
+mode_two() # for mode two.
+mode_three() # for mode three.
+```
+
+mode one is for adding a single object or viewing the details of a single object. It publishes weight and RFID tag to the topic-`reverse`.
+
+mode two is for getting the number of items, if weight of single item of same type exists in the database. It published number of items to topic-`reverse.`
+
+mode three is for monitoring the weight of something. A Threshold value to used by this mode. If its weight is more than the value, buzzer doesn't make any noise and the message `safe` is published to the topic `warning`. If its weight is less than the value, buzzer stats making noise and the message `critical` is published to the topic `warning`.
+
+the messages that can be sent to the topic-`swa_news` are `1`, `2` and `3`.
+
+When `swa_news` receives message, it triggers `on_message()` function in the python and runs mode 1 or 2 or 3 accordingly.
+```python
+def on_message():
+  pass
+```
