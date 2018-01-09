@@ -1,7 +1,0 @@
-git hub
-
-folder
-gitfolder
----------------
-new line added
-new line 2 for testing.
